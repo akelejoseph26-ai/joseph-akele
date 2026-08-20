@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Akele | Official Website</title>
+    <meta name="description" content="Official personal website of Joseph Akele">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%232563eb'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>JA</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --blue-light: #3b82f6;
+    --white: #ffffff;
+    --ash: #f1f5f9;
+    --ash-dark: #e2e8f0;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    width: 24px;
+    height: 2.5px;
+    background: var(--blue);
+    border-radius: 2px;
+}
+
+/* ===== Hero ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--ash) 100%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hello {
+    color: var(--blue);
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 13px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+}
+
+.btn.primary {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.btn.primary:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.btn.secondary {
+    background: var(--white);
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
+
+.btn.secondary:hover {
+    background: var(--ash);
+    transform: translateY(-2px);
+}
+
+.btn.full {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Avatar */
+.hero-avatar {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), #60a5fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
+}
+
+.circle span {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 90px 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--blue);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    font-size: 1.05rem;
+}
+
+/* ===== About ===== */
+.about {
+    background: var(--ash);
+}
+
+.about-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-box p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+}
+
+.about-box strong {
+    color: var(--blue);
+}
+
+/* ===== Feedback Form ===== */
+.feedback {
+    background: var(--white);
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--ash);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--ash-dark);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: var(--white);
+    color: var(--text);
+    transition: 0.3s;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-note {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.95rem;
+    color: var(--blue);
+    font-weight: 500;
+    min-height: 24px;
+}
+
+/* ===== Contact ===== */
+.contact {
+    background: var(--ash);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--ash-dark);
+    border-radius: 18px;
+    padding: 32px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.card:hover {
+    border-color: var(--blue);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.card .icon {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.card p {
+    color: var(--blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid var(--ash-dark);
+}
+
+footer p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* ===== Chatbot ===== */
+.chat-toggle {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    border: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    z-index: 999;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounceIcon 2.5s ease-in-out infinite;
+}
+
+.chat-toggle:hover {
+    transform: scale(1.15);
+    background: var(--blue-dark);
+    animation: none;
+}
+
+@keyframes bounceIcon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.chatbot {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 350px;
+    max-width: calc(100vw - 40px);
+    height: 460px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+    border: 1px solid var(--ash-dark);
+}
+
+.chatbot.open {
+    display: flex;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-header {
+    background: var(--blue);
+    color: white;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bot-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: var(--blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.chat-header strong {
+    display: block;
+    font-size: 0.95rem;
+}
+
+.status {
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.close-chat:hover {
+    opacity: 1;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 18px;
+    overflow-y: auto;
+    background: var(--ash);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message {
+    max-width: 85%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.message.bot {
+    background: white;
+    color: var(--text);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.message.user {
+    background: var(--blue);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 12px;
+    background: white;
+    border-top: 1px solid var(--ash-dark);
+    gap: 8px;
+    align-items: center;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid var(--ash-dark);
+    border-radius: 25px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.chat-input-area input:focus {
+    border-color: var(--blue);
+}
+
+.chat-input-area button {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    border: none;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-input-area button:hover {
+    background: var(--blue-dark);
+    transform: scale(1.05);
+}
+
+.typing {
+    display: flex;
+    gap: 4px;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 16px;
+    align-self: flex-start;
+    width: fit-content;
+}
+
+.typing span {
+    width: 7px;
+    height: 7px;
+    background: #94a3b8;
+    border-radius: 50%;
+    animation: bounce 1.2s infinite;
+}
+
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-5px); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-avatar {
+        order: -1;
+    }
+
+    .circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .circle span {
+        font-size: 2.8rem;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-form {
+        padding: 28px 20px;
+    }
+
+    .about-box {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+    }
+
+    .chatbot {
+        bottom: 90px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+        height: 70vh;
+    }
+}
+
+/* ===== Settings Toggle ===== */
+.settings-toggle {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--text);
+    border: 1px solid var(--ash-dark);
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 998;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-toggle:hover {
+    transform: scale(1.1) rotate(30deg);
+    border-color: var(--blue);
+}
+
+/* ===== Settings Panel ===== */
+.settings-panel {
+    position: fixed;
+    bottom: 165px;
+    right: 25px;
+    width: 300px;
+    max-width: calc(100vw - 40px);
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    display: none;
+    border: 1px solid var(--ash-dark);
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+}
+
+.settings-panel.open {
+    display: block;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px;
+    background: var(--blue);
+    color: white;
+}
+
+.settings-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.close-settings {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.close-settings:hover {
+    opacity: 1;
+}
+
+.settings-body {
+    padding: 20px;
+}
+
+.setting-group {
+    margin-bottom: 22px;
+}
+
+.setting-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.theme-options,
+.font-options {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-btn,
+.font-btn {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--ash-dark);
+    border-radius: 12px;
+    background: var(--ash);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.theme-btn.active,
+.font-btn.active {
+    border-color: var(--blue);
+    background: var(--blue);
+    color: white;
+}
+
+.color-options {
+    display: flex;
+    gap: 12px;
+}
+
+.color-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.color-btn.active {
+    border-color: var(--text);
+    transform: scale(1.15);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+.settings-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ===== Dark Theme ===== */
+body.dark {
+    --white: #0f172a;
+    --ash: #1e293b;
+    --ash-dark: #334155;
+    --text: #f1f5f9;
+    --text-light: #94a3b8;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .navbar {
+    background: #0f172a;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+body.dark .card,
+body.dark .about-box,
+body.dark .feedback-form,
+body.dark .chatbot,
+body.dark .settings-panel {
+    background: #1e293b;
+}
+
+body.dark .chat-messages {
+    background: #0f172a;
+}
+
+body.dark .message.bot {
+    background: #334155;
+    color: #f1f5f9;
+}
+
+body.dark .chat-input-area {
+    background: #1e293b;
+}
+
+body.dark .settings-toggle {
+    background: #1e293b;
+    color: #f1f5f9;
+    border-color: #334155;
+}
+
+/* Font sizes */
+body.font-small {
+    font-size: 14px;
+}
+
+body.font-large {
+    font-size: 18px;
+}
+
+body.font-large .hero h1 {
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+}
+
+@media (max-width: 480px) {
+    .settings-toggle {
+        bottom: 95px;
+        right: 15px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .settings-panel {
+        bottom: 155px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+    }
+}
+
+/* ===== Footer Links ===== */
+.footer-links {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--blue);
+}
+
+.footer-links span {
+    color: var(--text-light);
+}
+
+/* ===== Modals ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: 18px;
+    max-width: 560px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    background: var(--blue);
+    color: white;
+    border-radius: 18px 18px 0 0;
+}
+
+.modal-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 24px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.modal-body h4 {
+    color: var(--text);
+    margin: 18px 0 8px;
+    font-size: 1rem;
+}
+
+.modal-body p {
+    margin-bottom: 10px;
+}
+
+/* ===== Language Buttons ===== */
+.lang-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.lang-btn {
+    padding: 10px;
+    border: 2px solid var(--ash-dark);
+    border-radius: 12px;
+    background: var(--ash);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.lang-btn.active {
+    border-color: var(--blue);
+    background: var(--blue);
+    color: white;
+}
+
+/* ===== Scroll Reveal Animation ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* WhatsApp card highlight */
+.whatsapp-card {
+    border-color: #25d366 !important;
+}
+
+.whatsapp-card:hover {
+    border-color: #25d366 !important;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-card .icon {
+    color: #25d366;
+}
+
+/* Better feedback success */
+.form-note.success {
+    color: #10b981 !important;
+    font-weight: 600;
+}
+
+.form-note.error {
+    color: #ef4444 !important;
+}
+
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="logo">Joseph<span>Akele</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <p class="hello">Welcome to my space</p>
+                <h1>I'm <span>Joseph Akele</span></h1>
+                <p class="subtitle">Building connections, one conversation at a time.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn primary">Get In Touch</a>
+                    <a href="#feedback" class="btn secondary">Leave Feedback</a>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <div class="circle">
+                    <span>JA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container reveal">
+            <h2 class="title">About Me</h2>
+            <div class="about-box">
+                <p>
+                    Hi, I'm <strong>Joseph Akele</strong>.  
+                    This is my personal website — a clean space where you can learn a little about me and get in touch.
+                </p>
+                <p>
+                    I believe in good conversations, continuous learning, and creating positive connections.  
+                    Feel free to explore and reach out anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="feedback">
+        <div class="container reveal">
+            <h2 class="title">Feedback</h2>
+            <p class="section-desc">I’d love to hear from you. Your thoughts help me improve.</p>
+
+            <form class="feedback-form" id="feedbackForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message / Feedback</label>
+                    <textarea id="message" rows="5" placeholder="Write your feedback here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn primary full">Send Feedback</button>
+                <p class="form-note" id="formNote"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container reveal">
+            <h2 class="title">Contact Me</h2>
+            <p class="section-desc">You can reach me through any of these platforms:</p>
+
+            <div class="contact-grid">
+                <a href="https://wa.me/qr/OQEL5VFE3TCBE1" target="_blank" class="card whatsapp-card">
+                    <div class="icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Message me directly</p>
+                </a>
+
+                <a href="mailto:akelejoseph26@gmail.com" class="card">
+                    <div class="icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>akelejoseph26@gmail.com</p>
+                </a>
+
+                <a href="tel:+2347033190727" class="card">
+                    <div class="icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>07033190727</p>
+                </a>
+
+                <a href="https://www.instagram.com/josephakele_?igsh=MWtvcmJ1dXJxcXNnZw==" target="_blank" class="card">
+                    <div class="icon">📸</div>
+                    <h3>Instagram</h3>
+                    <p>@josephakele_</p>
+                </a>
+
+                <a href="https://x.com/thisisakele" target="_blank" class="card">
+                    <div class="icon">🐦</div>
+                    <h3>X (Twitter)</h3>
+                    <p>@thisisakele</p>
+                </a>
+
+                <a href="https://www.snapchat.com/add/thisisakele?share_id=TF-IJUiZ1iU&locale=en-US" target="_blank" class="card">
+                    <div class="icon">👻</div>
+                    <h3>Snapchat</h3>
+                    <p>@thisisakele</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" id="openPrivacy">Privacy Policy</a>
+                <span>•</span>
+                <a href="#" id="openTerms">Terms of Service</a>
+            </div>
+            <p>© 2026 Joseph Akele • Built with care</p>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal" id="privacyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Privacy Policy</h2>
+                <button class="modal-close" data-close="privacyModal">✕</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Last updated:</strong> August 2026</p>
+                <p>This website is a personal site owned by Joseph Akele. We respect your privacy.</p>
+                <h4>Information We Collect</h4>
+                <p>We do not collect personal information unless you voluntarily provide it through the feedback form or by contacting us directly.</p>
+                <h4>How We Use Information</h4>
+                <p>Any information you send (name, email, message) is used only to respond to your feedback or inquiry. We do not sell or share your data with third parties.</p>
+                <h4>Cookies & Local Storage</h4>
+                <p>This site uses local storage only to save your theme, color, and language preferences on your device. No tracking cookies are used.</p>
+                <h4>Contact</h4>
+                <p>If you have questions about this policy, contact us at: akelejoseph26@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Terms of Service</h2>
+                <button class="modal-close" data-close="termsModal">✕</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Last updated:</strong> August 2026</p>
+                <p>By using this website, you agree to the following terms:</p>
+                <h4>1. Personal Use</h4>
+                <p>This is a personal website created by Joseph Akele. Content is for general information and personal connection only.</p>
+                <h4>2. Acceptable Use</h4>
+                <p>You agree not to misuse the feedback form or contact methods for spam, harassment, or illegal purposes.</p>
+                <h4>3. Content</h4>
+                <p>All content on this site belongs to Joseph Akele unless otherwise stated. You may not copy or reuse it without permission.</p>
+                <h4>4. Limitation of Liability</h4>
+                <p>This website is provided “as is”. We are not liable for any damages arising from the use of this site.</p>
+                <h4>5. Changes</h4>
+                <p>These terms may be updated at any time. Continued use of the site means you accept the updated terms.</p>
+                <h4>Contact</h4>
+                <p>For questions: akelejoseph26@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot" id="chatbot">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="bot-avatar">AI</div>
+                <div>
+                    <strong>Joseph's Assistant</strong>
+                    <span class="status">● Online</span>
+                </div>
+            </div>
+            <button class="close-chat" id="closeChat">✕</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <p>Heyyy! 😊 Welcome! I'm Joseph's friendly assistant. Feel free to ask me anything — I'm happy to help!</p>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off">
+            <button id="sendBtn">➤</button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle -->
+    <button class="chat-toggle" id="chatToggle">💬</button>
+
+    <!-- Settings Button -->
+    <button class="settings-toggle" id="settingsToggle" title="Settings">⚙️</button>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel" id="settingsPanel">
+        <div class="settings-header">
+            <h3>⚙️ Settings</h3>
+            <button class="close-settings" id="closeSettings">✕</button>
+        </div>
+
+        <div class="settings-body">
+            <div class="setting-group">
+                <label>Theme</label>
+                <div class="theme-options">
+                    <button class="theme-btn active" data-theme="light">☀️ Light</button>
+                    <button class="theme-btn" data-theme="dark">🌙 Dark</button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label>Accent Color</label>
+                <div class="color-options">
+                    <button class="color-btn active" data-color="blue" style="background:#2563eb;" title="Blue"></button>
+                    <button class="color-btn" data-color="green" style="background:#10b981;" title="Green"></button>
+                    <button class="color-btn" data-color="purple" style="background:#8b5cf6;" title="Purple"></button>
+                    <button class="color-btn" data-color="pink" style="background:#ec4899;" title="Pink"></button>
+                    <button class="color-btn" data-color="orange" style="background:#f97316;" title="Orange"></button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label>Font Size</label>
+                <div class="font-options">
+                    <button class="font-btn" data-size="small">A-</button>
+                    <button class="font-btn active" data-size="normal">A</button>
+                    <button class="font-btn" data-size="large">A+</button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label>Language</label>
+                <div class="lang-options">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="ha">Hausa</button>
+                    <button class="lang-btn" data-lang="pidgin">Pidgin</button>
+                    <button class="lang-btn" data-lang="fr">Français</button>
+                    <button class="lang-btn" data-lang="es">Español</button>
+                    <button class="lang-btn" data-lang="pt">Português</button>
+                </div>
+            </div>
+
+            <p class="settings-note">Your preferences are saved automatically 💙</p>
+        </div>
+    </div>
+
+    
+<script>
+// ===== Mobile Menu =====
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+    });
+});
+
+// ===== Feedback Form =====
+const feedbackForm = document.getElementById('feedbackForm');
+const formNote = document.getElementById('formNote');
+
+feedbackForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+        formNote.textContent = "⚠️ Please fill in all fields.";
+        formNote.className = "form-note error";
+        return;
+    }
+
+    // Create email content
+    const subject = encodeURIComponent("Feedback from " + name);
+    const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n\n" +
+        "Message:\n" + message
+    );
+
+    formNote.textContent = "✅ Thank you! Opening your email app to send the message...";
+    formNote.className = "form-note success";
+
+    // Open user's email app after short delay
+    setTimeout(() => {
+        window.location.href = `mailto:akelejoseph26@gmail.com?subject=${subject}&body=${body}`;
+    }, 800);
+
+    // Reset form after delay
+    setTimeout(() => {
+        feedbackForm.reset();
+        formNote.textContent = "";
+        formNote.className = "form-note";
+    }, 4000);
+});
+
+// ===== Chatbot =====
+const chatToggle = document.getElementById('chatToggle');
+const chatbot = document.getElementById('chatbot');
+const closeChat = document.getElementById('closeChat');
+const chatMessages = document.getElementById('chatMessages');
+const chatInput = document.getElementById('chatInput');
+const sendBtn = document.getElementById('sendBtn');
+
+chatToggle.addEventListener('click', () => {
+    chatbot.classList.add('open');
+    chatInput.focus();
+});
+
+closeChat.addEventListener('click', () => {
+    chatbot.classList.remove('open');
+});
+
+sendBtn.addEventListener('click', sendMessage);
+chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+});
+
+function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+
+    addMessage(text, 'user');
+    chatInput.value = '';
+    showTyping();
+
+    setTimeout(() => {
+        removeTyping();
+        const reply = getBotReply(text);
+        addMessage(reply, 'bot');
+    }, 700 + Math.random() * 500);
+}
+
+function addMessage(text, type) {
+    const div = document.createElement('div');
+    div.className = `message ${type}`;
+    div.innerHTML = `<p>${text}</p>`;
+    chatMessages.appendChild(div);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function showTyping() {
+    const typing = document.createElement('div');
+    typing.className = 'typing';
+    typing.id = 'typingIndicator';
+    typing.innerHTML = '<span></span><span></span><span></span>';
+    chatMessages.appendChild(typing);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function removeTyping() {
+    const typing = document.getElementById('typingIndicator');
+    if (typing) typing.remove();
+}
+
+function getBotReply(input) {
+    const msg = input.toLowerCase();
+
+    // Greetings
+    if (msg.match(/\b(hi|hello|hey|good morning|good afternoon|good evening|hola)\b/)) {
+        return "Heyyy! 😊 So nice to meet you! I'm Joseph's friendly assistant. How are you doing today?";
+    }
+
+    // How are you
+    if (msg.match(/\b(how are you|how's it going|how are u|how far)\b/)) {
+        return "I'm doing really well, thank you for asking! 🥰 How about you? Hope your day is going great!";
+    }
+
+    // About Joseph
+    if (msg.match(/\b(who are you|who is joseph|about joseph|tell me about|about you|who is this)\b/)) {
+        return "Aww that's sweet of you to ask! 😊 I'm here to represent <strong>Joseph Akele</strong> — a really cool and friendly guy who loves connecting with people and learning new things. Want to know more about him?";
+    }
+
+    // Name
+    if (msg.match(/\b(name|what's your name|what is your name|who am i chatting)\b/)) {
+        return "I'm Joseph's little assistant! You can just call me his AI friend 🤖💙 Nice to chat with you!";
+    }
+
+    // Contact / Email
+    if (msg.match(/\b(email|mail|contact|reach|how to contact|how can i reach)\b/)) {
+        return "Of course! Here's how you can reach Joseph 😊<br><br>📧 Email: <strong>akelejoseph26@gmail.com</strong><br>📞 Phone: <strong>07033190727</strong><br><br>He'd be happy to hear from you!";
+    }
+
+    // Phone
+    if (msg.match(/\b(phone|number|call|mobile|whatsapp|phone number)\b/)) {
+        return "Sure thing! Joseph's phone number is <strong>07033190727</strong> 📱<br>Feel free to call or text him anytime!";
+    }
+
+    // Instagram
+    if (msg.match(/\b(instagram|insta|ig)\b/)) {
+        return "Yesss! Joseph is on Instagram 📸<br>His handle is <strong>@josephakele_</strong><br>Go say hi to him there, he'll appreciate it! 😊";
+    }
+
+    // Twitter / X
+    if (msg.match(/\b(twitter|x\.com|x account|tweet)\b/)) {
+        return "Joseph is on X (Twitter) too! 🐦<br>Follow him at <strong>@thisisakele</strong><br>He’d love to connect with you there!";
+    }
+
+    // Snapchat
+    if (msg.match(/\b(snapchat|snap)\b/)) {
+        return "Yes! You can add Joseph on Snapchat 👻<br>His username is <strong>@thisisakele</strong><br>Don’t be shy, go add him!";
+    }
+
+    // Social media
+    if (msg.match(/\b(social|socials|media|follow|social media)\b/)) {
+        return "Here are all of Joseph’s socials 💙<br><br>📸 Instagram: @josephakele_<br>🐦 X: @thisisakele<br>👻 Snapchat: @thisisakele<br><br>He’d be so happy if you followed him!";
+    }
+
+    // Feedback
+    if (msg.match(/\b(feedback|review|suggest|opinion)\b/)) {
+        return "That’s so kind of you! 🥹 You can leave feedback using the Feedback form on this website. Just scroll up to the Feedback section — Joseph really appreciates every message!";
+    }
+
+    // Help
+    if (msg.match(/\b(help|what can you do|commands|options)\b/)) {
+        return "Of course I can help! 😊 You can ask me about:<br>• Joseph<br>• His email or phone number<br>• His Instagram, X, or Snapchat<br>• How to leave feedback<br><br>Just type anything, I’m here for you!";
+    }
+
+    // Thanks
+    if (msg.match(/\b(thank|thanks|appreciate|thank you)\b/)) {
+        return "Aww you’re so welcome! 🥰 It makes me happy to help. Is there anything else you’d like to know?";
+    }
+
+    // Bye
+    if (msg.match(/\b(bye|goodbye|see you|later|i'm leaving)\b/)) {
+        return "Aww already leaving? 🥺 It was really nice chatting with you! Take care and come back anytime okay? Bye bye! 👋💙";
+    }
+
+    // Love / Nice
+    if (msg.match(/\b(love|nice|cool|awesome|amazing|beautiful)\b/)) {
+        return "Aww thank you so much! 🥹💕 That really means a lot. You’re so sweet!";
+    }
+
+    // Default friendly replies
+    const defaults = [
+        "Hmm I’m not sure I understood that 😅 But I’d love to help! You can ask me about Joseph, his contact info, or his social media.",
+        "Sorry I didn’t quite get that 😊 Try asking me things like “What’s Joseph’s email?” or “Show me his Instagram”!",
+        "I’m still learning! 🤖 But I can tell you all about Joseph, how to contact him, or where to find him online. What would you like to know?",
+        "That’s interesting! 😄 Want me to tell you how to reach Joseph or show you his socials?"
+    ];
+    return defaults[Math.floor(Math.random() * defaults.length)];
+}
+
+// ===== Settings Panel =====
+const settingsToggle = document.getElementById('settingsToggle');
+const settingsPanel = document.getElementById('settingsPanel');
+const closeSettings = document.getElementById('closeSettings');
+
+settingsToggle.addEventListener('click', () => {
+    settingsPanel.classList.toggle('open');
+    // Close chatbot if open
+    chatbot.classList.remove('open');
+});
+
+closeSettings.addEventListener('click', () => {
+    settingsPanel.classList.remove('open');
+});
+
+// Close settings when clicking outside
+document.addEventListener('click', (e) => {
+    if (!settingsPanel.contains(e.target) && !settingsToggle.contains(e.target)) {
+        settingsPanel.classList.remove('open');
+    }
+});
+
+// ===== Theme Switcher =====
+const themeBtns = document.querySelectorAll('.theme-btn');
+const colorBtns = document.querySelectorAll('.color-btn');
+const fontBtns = document.querySelectorAll('.font-btn');
+
+// Load saved settings
+function loadSettings() {
+    const theme = localStorage.getItem('theme') || 'light';
+    const color = localStorage.getItem('color') || 'blue';
+    const fontSize = localStorage.getItem('fontSize') || 'normal';
+
+    applyTheme(theme);
+    applyColor(color);
+    applyFontSize(fontSize);
+
+    // Update active buttons
+    themeBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.theme === theme);
+    });
+    colorBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.color === color);
+    });
+    fontBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.size === fontSize);
+    });
+}
+
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark');
+    } else {
+        document.body.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+}
+
+function applyColor(color) {
+    const colors = {
+        blue:   { main: '#2563eb', dark: '#1d4ed8' },
+        green:  { main: '#10b981', dark: '#059669' },
+        purple: { main: '#8b5cf6', dark: '#7c3aed' },
+        pink:   { main: '#ec4899', dark: '#db2777' },
+        orange: { main: '#f97316', dark: '#ea580c' }
+    };
+
+    const c = colors[color] || colors.blue;
+    document.documentElement.style.setProperty('--blue', c.main);
+    document.documentElement.style.setProperty('--blue-dark', c.dark);
+    localStorage.setItem('color', color);
+}
+
+function applyFontSize(size) {
+    document.body.classList.remove('font-small', 'font-large');
+    if (size === 'small') document.body.classList.add('font-small');
+    if (size === 'large') document.body.classList.add('font-large');
+    localStorage.setItem('fontSize', size);
+}
+
+// Theme buttons
+themeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        themeBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyTheme(btn.dataset.theme);
+    });
+});
+
+// Color buttons
+colorBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        colorBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyColor(btn.dataset.color);
+    });
+});
+
+// Font size buttons
+fontBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        fontBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFontSize(btn.dataset.size);
+    });
+});
+
+// Load settings when page opens
+loadSettings();
+
+// ===== Privacy & Terms Modals =====
+const privacyModal = document.getElementById('privacyModal');
+const termsModal = document.getElementById('termsModal');
+
+document.getElementById('openPrivacy').addEventListener('click', (e) => {
+    e.preventDefault();
+    privacyModal.classList.add('open');
+});
+
+document.getElementById('openTerms').addEventListener('click', (e) => {
+    e.preventDefault();
+    termsModal.classList.add('open');
+});
+
+document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.getElementById(btn.dataset.close).classList.remove('open');
+    });
+});
+
+// Close modal when clicking outside
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('open');
+    });
+});
+
+// ===== Language Switcher =====
+const translations = {
+    en: {
+        hello: "Welcome to my space",
+        title: "I'm Joseph Akele",
+        subtitle: "Building connections, one conversation at a time.",
+        btnContact: "Get In Touch",
+        btnFeedback: "Leave Feedback",
+        aboutTitle: "About Me",
+        about1: "Hi, I'm Joseph Akele. This is my personal website — a clean space where you can learn a little about me and get in touch.",
+        about2: "I believe in good conversations, continuous learning, and creating positive connections. Feel free to explore and reach out anytime.",
+        feedbackTitle: "Feedback",
+        feedbackDesc: "I’d love to hear from you. Your thoughts help me improve.",
+        contactTitle: "Contact Me",
+        contactDesc: "You can reach me through any of these platforms:",
+        footer: "© 2026 Joseph Akele • Built with care",
+        privacy: "Privacy Policy",
+        terms: "Terms of Service"
+    },
+    ha: {
+        hello: "Barka da zuwa wurina",
+        title: "Ni ne Joseph Akele",
+        subtitle: "Gina dangantaka, ta hanyar tattaunawa daya bayan daya.",
+        btnContact: "Tuntube Ni",
+        btnFeedback: "Bar Ra'ayi",
+        aboutTitle: "Game da Ni",
+        about1: "Sannu, ni ne Joseph Akele. Wannan shine shafina na musamman — wuri mai tsabta inda zaka iya sanin kadan game da ni kuma ka tuntube ni.",
+        about2: "Na yi imani da tattaunawa mai kyau, ci gaba da koyo, da kuma samar da alaƙa mai kyau. Ka yi yunƙurin bincika kuma ka tuntube ni a kowane lokaci.",
+        feedbackTitle: "Ra'ayi",
+        feedbackDesc: "Ina son jin daga gare ku. Tunanin ku yana taimaka min in inganta.",
+        contactTitle: "Tuntube Ni",
+        contactDesc: "Zaka iya samun ni ta waɗannan dandamali:",
+        footer: "© 2026 Joseph Akele • An gina da kulawa",
+        privacy: "Manufar Sirri",
+        terms: "Sharuɗɗan Amfani"
+    },
+    pidgin: {
+        hello: "Welcome to my space o",
+        title: "Na me be Joseph Akele",
+        subtitle: "I dey build connection, one talk after the other.",
+        btnContact: "Contact Me",
+        btnFeedback: "Leave Feedback",
+        aboutTitle: "About Me",
+        about1: "How far! Na me be Joseph Akele. This na my personal website — clean space wey you fit know small about me and contact me.",
+        about2: "I believe say good conversation, continuous learning, and positive connection dey important. Feel free to check around and reach out anytime.",
+        feedbackTitle: "Feedback",
+        feedbackDesc: "I go like hear from you. Your message go help me improve.",
+        contactTitle: "Contact Me",
+        contactDesc: "You fit reach me through any of these platforms:",
+        footer: "© 2026 Joseph Akele • Built with care",
+        privacy: "Privacy Policy",
+        terms: "Terms of Service"
+    },
+    fr: {
+        hello: "Bienvenue dans mon espace",
+        title: "Je suis Joseph Akele",
+        subtitle: "Créer des liens, une conversation à la fois.",
+        btnContact: "Me Contacter",
+        btnFeedback: "Laisser un Avis",
+        aboutTitle: "À Propos",
+        about1: "Bonjour, je suis Joseph Akele. Ceci est mon site personnel — un espace simple pour en savoir un peu plus sur moi.",
+        about2: "Je crois aux bonnes conversations, à l'apprentissage continu et aux connexions positives. N'hésitez pas à me contacter.",
+        feedbackTitle: "Avis",
+        feedbackDesc: "J'aimerais avoir votre avis. Vos idées m'aident à m'améliorer.",
+        contactTitle: "Contactez-moi",
+        contactDesc: "Vous pouvez me joindre via ces plateformes :",
+        footer: "© 2026 Joseph Akele • Fait avec soin",
+        privacy: "Politique de Confidentialité",
+        terms: "Conditions d'Utilisation"
+    },
+    es: {
+        hello: "Bienvenido a mi espacio",
+        title: "Soy Joseph Akele",
+        subtitle: "Construyendo conexiones, una conversación a la vez.",
+        btnContact: "Contáctame",
+        btnFeedback: "Dejar Comentario",
+        aboutTitle: "Sobre Mí",
+        about1: "Hola, soy Joseph Akele. Este es mi sitio personal — un espacio limpio donde puedes saber un poco más sobre mí.",
+        about2: "Creo en las buenas conversaciones, el aprendizaje continuo y las conexiones positivas. ¡No dudes en contactarme!",
+        feedbackTitle: "Comentarios",
+        feedbackDesc: "Me encantaría saber tu opinión. Tus ideas me ayudan a mejorar.",
+        contactTitle: "Contáctame",
+        contactDesc: "Puedes contactarme a través de estas plataformas:",
+        footer: "© 2026 Joseph Akele • Hecho con cuidado",
+        privacy: "Política de Privacidad",
+        terms: "Términos de Servicio"
+    },
+    pt: {
+        hello: "Bem-vindo ao meu espaço",
+        title: "Eu sou Joseph Akele",
+        subtitle: "Construindo conexões, uma conversa de cada vez.",
+        btnContact: "Entrar em Contato",
+        btnFeedback: "Deixar Feedback",
+        aboutTitle: "Sobre Mim",
+        about1: "Olá, eu sou Joseph Akele. Este é o meu site pessoal — um espaço limpo onde você pode saber um pouco mais sobre mim.",
+        about2: "Acredito em boas conversas, aprendizado contínuo e conexões positivas. Sinta-se à vontade para entrar em contato.",
+        feedbackTitle: "Feedback",
+        feedbackDesc: "Adoraria ouvir você. Suas ideias me ajudam a melhorar.",
+        contactTitle: "Contato",
+        contactDesc: "Você pode me encontrar nestas plataformas:",
+        footer: "© 2026 Joseph Akele • Feito com carinho",
+        privacy: "Política de Privacidade",
+        terms: "Termos de Serviço"
+    }
+};
+
+const langBtns = document.querySelectorAll('.lang-btn');
+
+function applyLanguage(lang) {
+    const t = translations[lang] || translations.en;
+
+    // Hero
+    const helloEl = document.querySelector('.hello');
+    const titleEl = document.querySelector('.hero h1');
+    const subtitleEl = document.querySelector('.subtitle');
+    const btns = document.querySelectorAll('.hero-btns .btn');
+
+    if (helloEl) helloEl.textContent = t.hello;
+    if (titleEl) titleEl.innerHTML = t.title.replace('Joseph Akele', '<span>Joseph Akele</span>');
+    if (subtitleEl) subtitleEl.textContent = t.subtitle;
+    if (btns[0]) btns[0].textContent = t.btnContact;
+    if (btns[1]) btns[1].textContent = t.btnFeedback;
+
+    // About
+    const aboutTitle = document.querySelector('#about .title');
+    const aboutPs = document.querySelectorAll('.about-box p');
+    if (aboutTitle) aboutTitle.textContent = t.aboutTitle;
+    if (aboutPs[0]) aboutPs[0].innerHTML = t.about1.replace('Joseph Akele', '<strong>Joseph Akele</strong>');
+    if (aboutPs[1]) aboutPs[1].textContent = t.about2;
+
+    // Feedback
+    const feedbackTitle = document.querySelector('#feedback .title');
+    const feedbackDesc = document.querySelector('#feedback .section-desc');
+    if (feedbackTitle) feedbackTitle.textContent = t.feedbackTitle;
+    if (feedbackDesc) feedbackDesc.textContent = t.feedbackDesc;
+
+    // Contact
+    const contactTitle = document.querySelector('#contact .title');
+    const contactDesc = document.querySelector('#contact .section-desc');
+    if (contactTitle) contactTitle.textContent = t.contactTitle;
+    if (contactDesc) contactDesc.textContent = t.contactDesc;
+
+    // Footer
+    const footerP = document.querySelector('footer p:last-child');
+    const privacyLink = document.getElementById('openPrivacy');
+    const termsLink = document.getElementById('openTerms');
+    if (footerP) footerP.textContent = t.footer;
+    if (privacyLink) privacyLink.textContent = t.privacy;
+    if (termsLink) termsLink.textContent = t.terms;
+
+    localStorage.setItem('language', lang);
+}
+
+langBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        langBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyLanguage(btn.dataset.lang);
+    });
+});
+
+// Load saved language
+const savedLang = localStorage.getItem('language') || 'en';
+applyLanguage(savedLang);
+langBtns.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === savedLang);
+});
+
+// ===== Scroll Reveal Animation =====
+function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 120;
+
+        if (elementTop < windowHeight - revealPoint) {
+            el.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+// Improve feedback form feedback
+const originalSubmit = feedbackForm.onsubmit;
+feedbackForm.addEventListener('submit', function(e) {
+    // Already handled above, just enhance the note
+}, { once: false });
+
+</script>
+</body>
+</html>
